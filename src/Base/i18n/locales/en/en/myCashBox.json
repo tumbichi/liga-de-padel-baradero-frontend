@@ -1,0 +1,8 @@
+{
+  "cashBox": {
+    "title": "Cash box of {{ name }}",
+    "card": {
+      "label": "Amount available in my cash box: "
+    }
+  }
+}

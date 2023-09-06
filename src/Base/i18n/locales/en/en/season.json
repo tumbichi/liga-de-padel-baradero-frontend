@@ -1,0 +1,54 @@
+{
+  "datatable": {
+    "label": {
+      "year": "Year",
+      "discount": "Discount"
+    }
+  },
+  "actions": {
+    "title": "Actions",
+    "create": "Create season",
+    "label": {
+      "edit": "Edit discount"
+    }
+  },
+  "create": {
+    "title": "Create season",
+    "label": {
+      "description": "Year",
+      "discount": "Discount"
+    },
+    "button": {
+      "submit": "Create season"
+    }
+  },
+  "update": {
+    "title": "Update season",
+    "label": {
+      "discount": "Discount"
+    },
+    "button": {
+      "submit": "Update season"
+    }
+  },
+  "message": {
+    "success": {
+      "update": "has been updated successfully",
+      "create": "has been created successfully"
+    }
+  },
+  "modal": {
+    "title": "Create new season",
+    "description": "Are you sure you want to create a new season?",
+    "button": {
+      "submit": "Accept",
+      "cancel": "Cancel"
+    }
+  },
+  "errors": {
+    "Required": "This field is required",
+    "Tiene que ser un año": "It must be a year",
+    "Not a number": "This field is required",
+    "Tiene que ser un descuento": "It must be a discount"
+  }
+}

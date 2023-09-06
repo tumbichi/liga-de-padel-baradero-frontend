@@ -1,0 +1,23 @@
+{
+  "emptyParcels": {
+    "title": "You don't have any associated parcels",
+    "description": "You can associate your parcels with your DNI",
+    "linkParcels": "Associate parcels"
+  },
+  "linkParcels": {
+    "title": "Associate parcels",
+    "error": {
+      "required": "This field is required"
+    },
+    "label": {
+      "document": "Document number"
+    },
+    "placeholder": {
+      "document": "Enter your DNI"
+    },
+    "submit": "Done"
+  },
+  "myParcels": {
+    "title": "My parcels"
+  }
+}

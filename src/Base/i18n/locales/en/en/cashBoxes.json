@@ -1,0 +1,12 @@
+{
+  "cashBoxes": {
+    "title": "List of cash boxes",
+    "card": {
+      "label": "Amount available in my cash box: "
+    },
+    "label": {
+      "description": "Description",
+      "currentValue": "Value"
+    }
+  }
+}

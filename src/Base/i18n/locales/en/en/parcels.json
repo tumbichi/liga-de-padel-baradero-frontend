@@ -1,0 +1,114 @@
+{
+  "create": {
+    "title": "Create new parcel",
+    "submit": "Create parcel",
+    "button": {
+      "next": "Next"
+    },
+    "confirm": {
+      "title": "Confirm data"
+    },
+    "debt": {
+      "title": "Enter current debt status",
+      "item": {
+        "title": "Debt {{ season }}",
+        "label": "Enter the quotas already paid"
+      }
+    },
+    "debtCollector": {
+      "title": "Select a debt collector.",
+      "label": "Select a debt collector"
+    },
+
+    "parcel": {
+      "title": "Enter parcel data"
+    },
+    "owners": {
+      "title": "Enter owner's data",
+      "addOwner": "Add new owner"
+    },
+    "payer": {
+      "title": "Enter payer data",
+      "label": "Select an option: ",
+      "create": {
+        "title": "Payer",
+        "address": "Payer's address"
+      },
+      "select": {
+        "label": "Select a payer"
+      }
+    },
+    "radio1": {
+      "createPayer": "Create new person",
+      "selectPayer": "Select existing person"
+    },
+    "radio2": {
+      "createOwners": "Create new people",
+      "selectOwners": "Select existing people"
+    },
+    "season": {
+      "label": "Seasons"
+    },
+    "steps": {
+      "step1": {
+        "title": "Parcel and payer",
+        "description": "Create parcel with payer data"
+      },
+      "step2": {
+        "title": "Owners",
+        "description": "Enter the data of the owners of the parcel"
+      },
+      "step3": {
+        "title": "Debt",
+        "description": "Enter the debt status"
+      },
+      "step4": {
+        "title": "Debt Collector",
+        "description": "Select a debt collector"
+      }
+    }
+  },
+  "generateExpense": {
+    "label": {
+      "description": "Expense description",
+      "value": "Amount"
+    }
+  },
+  "parcel": {
+    "label": {
+      "description": "Parcel name",
+      "parcelType": "Is it busy?",
+      "lastPayDate": "Last pay date",
+      "payer": "Payer",
+      "owners": "Owners",
+      "address": "Address",
+      "debtCollector": "Debt Collector",
+      "email": "Email",
+      "phoneNumber": "Phone number",
+      "cellPhoneNumber": "Cell phone number"
+    }
+  },
+  "pays": {
+    "label": {
+      "quotas": "What quotas will you charge?",
+      "quota": "Quota {{ month }}",
+      "amountToBeCollected": "Amount to be collected: ",
+      "isVirtualPay": "¿Is it a transfer payment?"
+    },
+    "success": {
+      "partial": "Partial payment of $ {{ amount }} successfully completed",
+      "total": "Total payment of $ {{ amount }} successfully completed",
+      "expense": "Expense of $ {{ amount }} successfully settled"
+    }
+  },
+  "actions": {
+    "label": "Actions",
+    "createParcel": "Create new parcel",
+    "editParcel": "Edit parcel",
+    "edit": "Edit payer and owners",
+    "show": "Details of parcel",
+    "generateParcialPay": "Generate parcial pay",
+    "generateTotalPay": "Generate total pay",
+    "generateExpense": "Seattle expense"
+  }
+}

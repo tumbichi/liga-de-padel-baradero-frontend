@@ -1,0 +1,53 @@
+{
+  "datatable": {
+    "label": {
+      "name": "Name",
+      "email": "Email",
+      "box": "Box"
+    }
+  },
+  "actions": {
+    "title": "Actions",
+    "create": "Create Debt Collector",
+    "label": {
+      "edit": "Edit Debt Collector",
+      "delete": "Delete Debt Collector"
+    }
+  },
+  "create": {
+    "title": "Create Debt Collector",
+    "label": {
+      "name": "Name",
+      "email": "Email address",
+      "password": "Password",
+      "confirmPassword": "Confirm password"
+    },
+    "button": {
+      "submit": "Create Debt Collector"
+    }
+  },
+  "update": {
+    "title": "Edit Debt Collector",
+    "label": {
+      "name": "Name",
+      "email": "Email address"
+    },
+    "button": {
+      "submit": "Update Debt Collector"
+    }
+  },
+  "message": {
+    "success": {
+      "update": "has been successfully updated",
+      "create": "has been created successfully"
+    }
+  },
+  "modal": {
+    "title": "Delete {{ name }}",
+    "description": "Are you sure you want to delete this Debt Collector?",
+    "button": {
+      "submit": "Accept",
+      "cancel": "Cancel"
+    }
+  }
+}
