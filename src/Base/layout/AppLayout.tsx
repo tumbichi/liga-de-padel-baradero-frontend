@@ -1,7 +1,7 @@
 import { PropsWithChildren } from "react";
 import { Box, Flex, Stack } from "@chakra-ui/react";
 
-import { HomeModernIcon, ShareIcon } from "@heroicons/react/24/outline";
+import { HomeModernIcon, TrophyIcon, ShareIcon } from "@heroicons/react/24/outline";
 
 import { SidebarProvider } from "Base/contexts/SidebarContext";
 import { DrawerProvider } from "Base/contexts/DrawerContext";
@@ -18,6 +18,11 @@ const AppLayout = ({ children }: PropsWithChildren) => {
       title: t("sidebar.menu.home"),
       path: "/",
       icon: HomeModernIcon,
+    },
+    {
+      title: "Tournaments",
+      path: "/tournaments",
+      icon: TrophyIcon,
     },
     {
       title: "Cool feature",
