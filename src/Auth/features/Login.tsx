@@ -53,7 +53,10 @@ LoginProps) {
       .then(navigateToHome)
       .catch((e: unknown) => {
         const msg =
-          e && typeof e === "object" && "message" in e
+          e &&
+          typeof e === "object" &&
+          "message" in e &&
+          typeof e.message === "string"
             ? (e.message as string)
             : "Error inesperado, por favor intente nuevamente mas tarde";
 
