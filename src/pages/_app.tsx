@@ -8,7 +8,7 @@ import AppLayout from "Base/layout/AppLayout";
 import styleCache from "Base/styles/styleCache";
 import theme from "Base/theme";
 import { Loading } from "Base/components";
-import useRouteLoading from "Base/hooks/useRouteLoading";
+import useRouteLoading from "Base/utils/hooks/useRouteLoading";
 import Head from "next/head";
 import { useCallback } from "react";
 
