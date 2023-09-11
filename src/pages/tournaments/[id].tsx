@@ -42,8 +42,10 @@ const TournamentDetailsPage = ({ tournament }: TournamentDetailsPageProps) => {
 
   const tournamentPlayerWithoutMatch = currentTournament.players.filter(
     (player) =>
-      !roundSelected?.matches.some((match) =>
-        match.players.some((matchPlayer) => matchPlayer.id === player.id)
+      !roundSelected?.matches.some(
+        (match) =>
+          match.couple1.some((matchPlayer) => matchPlayer.id === player.id) ||
+          match.couple2.some((matchPlayer) => matchPlayer.id === player.id)
       )
   );
 

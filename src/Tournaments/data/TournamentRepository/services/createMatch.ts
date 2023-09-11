@@ -3,14 +3,16 @@ import tournamentsClient from "../client";
 import { Match } from "../TournamentsRepository";
 
 export default async function createMatch(
-  playersIds: number[],
+  couple1Ids: number[],
+  couple2Ids: number[],
   roundId: number
 ) {
   let errorMessage: string | undefined;
 
   try {
     const response = await tournamentsClient.post<Match>("/match/create", {
-      playersIds,
+      couple1Ids,
+      couple2Ids,
       roundId,
     });
     return response.data;

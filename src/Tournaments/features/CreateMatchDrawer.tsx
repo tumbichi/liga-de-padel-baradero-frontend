@@ -123,8 +123,9 @@ const CreateMatchDrawer = ({
     if (player1 && player2 && player3 && player4) {
       setLoading(true);
       createMatch(
-        [player1.id, player2.id, player3.id, player4.id],
-        roundSelected?.id as number
+        [player1.id, player2.id],
+        [player3.id, player4.id],
+        roundSelected.id
       )
         .then((matchCreated) => {
           onMatchCreated(matchCreated);

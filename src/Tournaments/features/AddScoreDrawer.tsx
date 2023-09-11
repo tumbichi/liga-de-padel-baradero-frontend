@@ -86,13 +86,13 @@ const AddScoreDrawer = ({
 
       const winners =
         coupleSelected === "1"
-          ? [match.players[0].id, match.players[1].id]
-          : [match.players[2].id, match.players[3].id];
+          ? [match.couple1[0].id, match.couple1[1].id]
+          : [match.couple2[0].id, match.couple2[1].id];
 
       const lossers =
         coupleSelected === "2"
-          ? [match.players[2].id, match.players[3].id]
-          : [match.players[0].id, match.players[1].id];
+          ? [match.couple2[0].id, match.couple2[1].id]
+          : [match.couple1[0].id, match.couple1[1].id];
 
       addScoreToMatch(validSets, winners, lossers, match.id)
         .then((matchUpdated) => {
@@ -125,10 +125,10 @@ const AddScoreDrawer = ({
                 Pareja 1
               </Heading>
               <Text>
-                {match.players[0].firstname} {match.players[0].lastname}
+                {match.couple1[0].firstname} {match.couple1[0].lastname}
               </Text>
               <Text>
-                {match.players[1].firstname} {match.players[1].lastname}
+                {match.couple1[1].firstname} {match.couple1[1].lastname}
               </Text>
             </Box>
             <Text fontWeight="800">VS</Text>
@@ -137,10 +137,10 @@ const AddScoreDrawer = ({
                 Pareja 2
               </Heading>
               <Text>
-                {match.players[2].firstname} {match.players[2].lastname}
+                {match.couple2[0].firstname} {match.couple2[0].lastname}
               </Text>
               <Text>
-                {match.players[3].firstname} {match.players[3].lastname}
+                {match.couple2[1].firstname} {match.couple2[1].lastname}
               </Text>
             </Box>
           </Flex>

@@ -6,7 +6,6 @@ import {
   CardHeader,
   Center,
   Flex,
-  HStack,
   Heading,
   Icon,
   Stack,
@@ -43,26 +42,26 @@ const MatchCard = ({
       <CardBody>
         <Flex alignItems="center" gap={4}>
           <Box>
-            <Heading size="xs" mb={2}>
+            <Heading mb={2} size="xs">
               Pareja 1
             </Heading>
             <Text>
-              {match.players[0].firstname} {match.players[0].lastname}
+              {match.couple1[0].firstname} {match.couple1[0].lastname}
             </Text>
             <Text>
-              {match.players[1].firstname} {match.players[1].lastname}
+              {match.couple1[1].firstname} {match.couple1[1].lastname}
             </Text>
           </Box>
           <Text fontWeight="800">VS</Text>
           <Box>
-            <Heading size="xs" mb={2}>
+            <Heading mb={2} size="xs">
               Pareja 2
             </Heading>
             <Text>
-              {match.players[2].firstname} {match.players[2].lastname}
+              {match.couple2[0].firstname} {match.couple2[0].lastname}
             </Text>
             <Text>
-              {match.players[3].firstname} {match.players[3].lastname}
+              {match.couple2[1].firstname} {match.couple2[1].lastname}
             </Text>
           </Box>
         </Flex>
@@ -93,12 +92,12 @@ const MatchCard = ({
               >
                 <Stack justifyContent="flex-end" spacing={1}>
                   <Box>
-                    <Text fontWeight={500} fontSize="lg">
+                    <Text fontSize="lg" fontWeight={500}>
                       Pareja 1
                     </Text>
                   </Box>
                   <Box>
-                    <Text fontWeight={500} fontSize="lg">
+                    <Text fontSize="lg" fontWeight={500}>
                       Pareja 2
                     </Text>
                   </Box>

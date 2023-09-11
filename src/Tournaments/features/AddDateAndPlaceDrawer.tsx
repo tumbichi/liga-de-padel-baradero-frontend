@@ -57,7 +57,6 @@ const AddDateAndPlaceDrawer = ({
       setLoading(true);
       updateDateAndPlaceToMatch(new Date(date), place, match.id)
         .then((matchUpdated) => {
-          console.log("matchUpdated :>> ", matchUpdated);
           onMatchUpdated(matchUpdated);
           closeDrawer();
           toast({ status: "success", title: "Partido actualizado" });
@@ -87,19 +86,19 @@ const AddDateAndPlaceDrawer = ({
           <Flex alignItems="center" gap={4}>
             <Box>
               <Text>
-                {match.players[0].firstname} {match.players[0].lastname}
+                {match.couple1[0].firstname} {match.couple1[0].lastname}
               </Text>
               <Text>
-                {match.players[1].firstname} {match.players[1].lastname}
+                {match.couple1[1].firstname} {match.couple1[1].lastname}
               </Text>
             </Box>
             <Text fontWeight="800">VS</Text>
             <Box>
               <Text>
-                {match.players[2].firstname} {match.players[2].lastname}
+                {match.couple2[0].firstname} {match.couple2[0].lastname}
               </Text>
               <Text>
-                {match.players[3].firstname} {match.players[3].lastname}
+                {match.couple2[1].firstname} {match.couple2[1].lastname}
               </Text>
             </Box>
           </Flex>

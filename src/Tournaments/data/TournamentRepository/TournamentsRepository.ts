@@ -21,7 +21,8 @@ export interface Score {
 
 export interface Match {
   id: number;
-  players: Player[];
+  couple1: Player[];
+  couple2: Player[];
   date: Date | null;
   place: Place | null;
   score: Score | null;
@@ -51,7 +52,11 @@ interface ITournamentsRepository {
   ) => Promise<Match>;
   getAllTournaments: () => Promise<Tournament[]>;
   getTournamentById: (tournamentId: string) => Promise<Tournament>;
-  createMatch: (playersIds: number[], roundId: number) => Promise<Match>;
+  createMatch: (
+    couple1Ids: number[],
+    couple2Ids: number[],
+    roundId: number
+  ) => Promise<Match>;
   updateDateAndPlaceToMatch: (
     date: Date,
     place: Place,
