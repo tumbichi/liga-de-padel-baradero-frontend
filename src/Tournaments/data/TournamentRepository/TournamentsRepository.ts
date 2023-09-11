@@ -75,10 +75,6 @@ const TournamentsRepository = (userToken: string): ITournamentsRepository => {
     getTournamentById,
     createMatch,
     updateDateAndPlaceToMatch,
-    // updatePlayer,
-    // deletePlayer,
-    // getAllPlayers,
-    // getPlayerById,
   };
 };
 

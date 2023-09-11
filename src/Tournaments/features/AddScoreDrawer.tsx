@@ -53,6 +53,13 @@ interface AddScoreDrawerProps {
   onClose: () => void;
   onScoreAdded: (match: Match) => void;
 }
+
+const defaultSets = [
+  { gamesTeam1: undefined, gamesTeam2: undefined },
+  { gamesTeam1: undefined, gamesTeam2: undefined },
+  { gamesTeam1: undefined, gamesTeam2: undefined },
+];
+
 const AddScoreDrawer = ({
   isOpen,
   match,
@@ -63,16 +70,15 @@ const AddScoreDrawer = ({
   const { addScoreToMatch } = useAddScoreToMatchService();
   const borderColor = useColorModeValue("black", "white");
   const [isLoading, setLoading] = useState(false);
-  const [setsInput, setSetsInput] = useState<Partial<Omit<Set, "id">>[]>([
-    { gamesTeam1: undefined, gamesTeam2: undefined },
-    { gamesTeam1: undefined, gamesTeam2: undefined },
-    { gamesTeam1: undefined, gamesTeam2: undefined },
-  ]);
+  const [setsInput, setSetsInput] =
+    useState<Partial<Omit<Set, "id">>[]>(defaultSets);
   const [coupleSelected, setCoupleSelected] = useState<string | undefined>(
     undefined
   );
 
   const closeDrawer = useCallback(() => {
+    setSetsInput(defaultSets);
+    setCoupleSelected(undefined);
     onClose();
   }, [onClose]);
 
