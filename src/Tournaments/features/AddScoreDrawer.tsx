@@ -33,10 +33,7 @@ const validateSet = (
   sets.forEach((set) => {
     if (
       typeof set.gamesTeam1 === "number" &&
-      typeof set.gamesTeam2 === "number" &&
-      set.gamesTeam1 >= 0 &&
-      set.gamesTeam2 >= 0 &&
-      (set.gamesTeam1 > 0 || set.gamesTeam2 > 0)
+      typeof set.gamesTeam2 === "number"
     ) {
       validSets.push({
         gamesTeam1: set.gamesTeam1,
@@ -80,7 +77,7 @@ const AddScoreDrawer = ({
   }, [onClose]);
 
   const handleAddScoreDrawer = () => {
-    const {isValid, validSets} = validateSet(setsInput)
+    const { isValid, validSets } = validateSet(setsInput);
     if (coupleSelected !== undefined && isValid) {
       setLoading(true);
 
