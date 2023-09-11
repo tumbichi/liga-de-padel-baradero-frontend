@@ -18,7 +18,6 @@ import FormSectionLayout from "Base/layout/FormSectionLayout";
 
 const CreatePlayer = () => {
   const toast = useToast();
-  const { t } = useTranslation("players");
   const {
     register,
     handleSubmit,
@@ -52,32 +51,32 @@ const CreatePlayer = () => {
   return (
     <FormPageLayout onSubmit={handleSubmit(handleCreatePlayer)}>
       <FormContainerLayout>
-        <FormSectionLayout title={t("player.title")}>
+        <FormSectionLayout title="Datos del jugador">
           <FormInputText
             isRequired
-            errorMessage={
+            /*  errorMessage={
               errors.firstname
                 ? (t(`errors.${errors.firstname.message}`, {
                     ns: "common",
                   }) as string) // TODO: Deberia eleminar este casteo: `as string`
                 : undefined
-            }
+            } */
             inputProps={register("firstname")}
-            label={t("player.label.firstname")}
+            label="Nombre"
             name="firstname"
           />
 
           <FormInputText
             isRequired
-            errorMessage={
+            /* errorMessage={
               errors.lastname
                 ? (t(`errors.${errors.lastname.message}`, {
                     ns: "common",
                   }) as string) // TODO: Deberia eleminar este casteo: `as string`
                 : undefined
-            }
+            } */
             inputProps={register("lastname")}
-            label={t("player.label.lastname")}
+            label={"Apellido"}
             name="lastname"
           />
         </FormSectionLayout>
@@ -90,7 +89,7 @@ const CreatePlayer = () => {
         type="submit"
         variant="solid"
       >
-        {t("create.button.submit")}
+        Agregar
       </Button>
     </FormPageLayout>
   );

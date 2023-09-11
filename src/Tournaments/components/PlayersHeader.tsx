@@ -1,29 +1,20 @@
-import { Button, Flex, Heading, Icon } from "@chakra-ui/react";
-import { PlusIcon } from "@heroicons/react/24/outline";
+import { Flex, Heading } from "@chakra-ui/react";
 
-import { useTranslation } from "Base/i18n";
+/* interface TournamentsHeaderProps {
+  navigateToCreateTournament?: () => void;
+} */
 
-interface TournamentsHeaderProps {
-  navigateToCreateTournament: () => void;
-}
-
-const TournamentsHeader = ({
-  navigateToCreateTournament,
-}: TournamentsHeaderProps) => {
-  const { t } = useTranslation(["tournaments", "appLayout"]);
-
-  return (
-    <Flex justify="space-between">
-      <Heading>{t("sidebar.menu.tournaments", { ns: "appLayout" })}</Heading>
-      {/* <Button
+const TournamentsHeader = () => (
+  <Flex justify="space-between">
+    <Heading>Torneos</Heading>
+    {/* <Button
         leftIcon={<Icon as={PlusIcon} />}
         variant="outline"
         onClick={navigateToCreateTournament}
       >
         {t("actions.createTournament")}
       </Button> */}
-    </Flex>
-  );
-};
+  </Flex>
+);
 
 export default TournamentsHeader;

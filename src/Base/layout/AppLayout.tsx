@@ -1,11 +1,7 @@
 import { PropsWithChildren } from "react";
 import { Box, Flex, Stack } from "@chakra-ui/react";
 
-import {
-  HomeModernIcon,
-  TrophyIcon,
-  ShareIcon,
-} from "@heroicons/react/24/outline";
+import { HomeModernIcon, TrophyIcon } from "@heroicons/react/24/outline";
 
 import { SidebarProvider } from "Base/contexts/SidebarContext";
 import { DrawerProvider } from "Base/contexts/DrawerContext";

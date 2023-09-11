@@ -24,9 +24,31 @@ import {
 import { FormRadioGroup } from "Base/components";
 import useAddScoreToMatchService from "Tournaments/data/TournamentRepository/hooks/useAddScoreToMatchService";
 
-const isValidSet = (
+const validateSet = (
   sets: Partial<Omit<Set, "id">>[]
-): Omit<Set, "id">[] | boolean => Boolean(true);
+): { validSets: Omit<Set, "id">[]; isValid: boolean } => {
+  const validSets: Omit<Set, "id">[] = [];
+  let isValid = true;
+
+  sets.forEach((set) => {
+    if (
+      typeof set.gamesTeam1 === "number" &&
+      typeof set.gamesTeam2 === "number" &&
+      set.gamesTeam1 >= 0 &&
+      set.gamesTeam2 >= 0 &&
+      (set.gamesTeam1 > 0 || set.gamesTeam2 > 0)
+    ) {
+      validSets.push({
+        gamesTeam1: set.gamesTeam1,
+        gamesTeam2: set.gamesTeam2,
+      });
+    } else {
+      isValid = false; // Retorna false si un set es inválido
+    }
+  });
+
+  return { isValid, validSets };
+};
 
 interface AddScoreDrawerProps {
   isOpen: boolean;
@@ -58,7 +80,8 @@ const AddScoreDrawer = ({
   }, [onClose]);
 
   const handleAddScoreDrawer = () => {
-    if (coupleSelected !== undefined && isValidSet(setsInput)) {
+    const {isValid, validSets} = validateSet(setsInput)
+    if (coupleSelected !== undefined && isValid) {
       setLoading(true);
 
       const winners =
@@ -71,7 +94,7 @@ const AddScoreDrawer = ({
           ? [match.players[2].id, match.players[3].id]
           : [match.players[0].id, match.players[1].id];
 
-      addScoreToMatch(setsInput, winners, lossers, match.id)
+      addScoreToMatch(validSets, winners, lossers, match.id)
         .then((matchUpdated) => {
           onScoreAdded(matchUpdated);
           closeDrawer();

@@ -13,11 +13,11 @@ import TournamentList from "Tournaments/features/TournamentList";
 export default function Home() {
   const router = useRouter();
 
-  const navigateToCreateTournament = useCallback(
+  /*   const navigateToCreateTournament = useCallback(
     () => router.push("/tournament/create"),
     [router]
   );
-
+ */
   const navigateToTournamentDetails = useCallback(
     (tournamentId: string) => {
       router.push(`/tournaments/${tournamentId}`);
@@ -38,7 +38,7 @@ export default function Home() {
           {{
             header: (
               <TournamentsHeader
-                navigateToCreateTournament={navigateToCreateTournament}
+              // navigateToCreateTournament={navigateToCreateTournament}
               />
             ),
             content: (
