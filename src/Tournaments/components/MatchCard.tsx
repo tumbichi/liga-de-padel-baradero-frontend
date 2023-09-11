@@ -22,8 +22,8 @@ import { places } from "Tournaments/data/Place/places";
 interface MatchCardProps {
   match: Match;
   index: number;
-  onAddDateAndPlace: (match: Match) => void;
-  onAddScore: (match: Match) => void;
+  onAddDateAndPlace?: (match: Match) => void;
+  onAddScore?: (match: Match) => void;
 }
 
 const MatchCard = ({
@@ -121,29 +121,33 @@ const MatchCard = ({
               </Flex>
             ) : (
               <Center borderTop={`1px ${borderColor} solid`} mt={4} pt={4}>
-                <Button
-                  colorScheme="main"
-                  leftIcon={<Icon as={SquaresPlusIcon} />}
-                  variant="outline"
-                  w="full"
-                  onClick={() => onAddScore(match)}
-                >
-                  Agregar resultado
-                </Button>
+                {onAddScore && (
+                  <Button
+                    colorScheme="main"
+                    leftIcon={<Icon as={SquaresPlusIcon} />}
+                    variant="outline"
+                    w="full"
+                    onClick={() => onAddScore(match)}
+                  >
+                    Agregar resultado
+                  </Button>
+                )}
               </Center>
             )}
           </>
         ) : (
           <Center borderTop={`1px ${borderColor} solid`} mt={4} pt={4}>
-            <Button
-              colorScheme="main"
-              leftIcon={<Icon as={CalendarDaysIcon} />}
-              variant="outline"
-              w="full"
-              onClick={() => onAddDateAndPlace(match)}
-            >
-              Agregar horario y lugar
-            </Button>
+            {onAddDateAndPlace && (
+              <Button
+                colorScheme="main"
+                leftIcon={<Icon as={CalendarDaysIcon} />}
+                variant="outline"
+                w="full"
+                onClick={() => onAddDateAndPlace(match)}
+              >
+                Agregar horario y lugar
+              </Button>
+            )}
           </Center>
         )}
         {/* {match.place && match.date} */}

@@ -18,14 +18,9 @@ const columns = [
 ];
 
 function PlayerList() {
-  const {playersList} = useAllPlayersPaginated();
+  const { playersList, loading } = useAllPlayersPaginated();
 
-  return (
-    <DataTable
-      columns={columns}
-      data={playersList}
-    />
-  );
+  return <DataTable columns={columns} loading={loading} data={playersList} />;
 }
 
 export default PlayerList;

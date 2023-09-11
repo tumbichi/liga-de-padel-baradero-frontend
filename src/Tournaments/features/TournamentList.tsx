@@ -10,7 +10,7 @@ interface TournamentListProps {
 const TournamentList = ({
   navigateToTournamentDetails,
 }: TournamentListProps) => {
-  const { tournamentsList } = useTournamentsList();
+  const { tournamentsList, loading } = useTournamentsList();
 
   const handleItemClick = (row: Tournament) => {
     navigateToTournamentDetails(row.id);
@@ -39,6 +39,7 @@ const TournamentList = ({
         },
       ]}
       data={tournamentsList}
+      loading={loading}
       onClickRow={handleItemClick}
     />
   );

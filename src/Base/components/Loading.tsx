@@ -8,7 +8,7 @@ const loop = keyframes`
 
 const Loading = (props: CenterProps): JSX.Element => (
   <Center flexDir="column" gap="centi" {...props}>
-    <Logo width={220} />
+    <Logo width={80} />
 
     <Box
       _after={{

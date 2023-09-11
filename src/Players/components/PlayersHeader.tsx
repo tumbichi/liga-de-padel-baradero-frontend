@@ -8,21 +8,17 @@ interface PlayersHeaderProps {
   navigateToCreatePlayer: () => void;
 }
 
-const PlayersHeader = ({ navigateToCreatePlayer }: PlayersHeaderProps) => {
-  const { t } = useTranslation(["players", "appLayout"]);
-
-  return (
-    <Flex justify="space-between">
-      <Heading>{t("sidebar.menu.players", { ns: "appLayout" })}</Heading>
-      <Button
-        leftIcon={<Icon as={PlusIcon} />}
-        variant="outline"
-        onClick={navigateToCreatePlayer}
-      >
-        {t("actions.createPerson")}
-      </Button>
-    </Flex>
-  );
-};
+const PlayersHeader = ({ navigateToCreatePlayer }: PlayersHeaderProps) => (
+  <Flex justify="space-between">
+    <Heading>Jugadores</Heading>
+    <Button
+      leftIcon={<Icon as={PlusIcon} />}
+      variant="outline"
+      onClick={navigateToCreatePlayer}
+    >
+      Agregar jugador
+    </Button>
+  </Flex>
+);
 
 export default PlayersHeader;
