@@ -1,0 +1,30 @@
+{
+  "header": {
+    "menu": {
+      "myAccount": "My account",
+      "configuration": "Configuration",
+      "logout": "Logout",
+      "deleteUser": "Delete account"
+    },
+    "deleteModal": {
+      "title": "Do you want to delete your account?",
+      "description": "If you want to delete your account, it will not be reversible"
+    }
+  },
+  "sidebar": {
+    "menu": {
+      "home": "Home",
+      "people": "People",
+      "myCashBox": "My Cash Box",
+      "parcelValue": "Parcel Value",
+      "season": "Season",
+      "cashBoxes": "Cash Boxes",
+      "debtCollector": "Debt Collector",
+      "parcels": "Parcels",
+      "movements": "Cash Movements"
+    }
+  },
+  "footer": {
+    "rightsReserved": "All rights reserved"
+  }
+}

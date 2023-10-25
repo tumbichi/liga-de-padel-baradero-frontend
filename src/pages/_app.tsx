@@ -2,28 +2,54 @@ import type { AppProps } from "next/app";
 import { Center, ChakraProvider } from "@chakra-ui/react";
 import { CacheProvider } from "@emotion/react";
 
-import AppLayout from "Shared/layout/AppLayout";
-import styleCache from "Shared/styles/styleCache";
-import theme from "Shared/theme";
-import { Loading } from "Shared/components";
-import useRouteLoading from "Shared/hooks/useRouteLoading";
+import { AuthProvider, PrivateRouteWrapper } from "@kushitech/auth-module";
 
-export default function App({ Component, pageProps }: AppProps) {
+import AppLayout from "Base/layout/AppLayout";
+import styleCache from "Base/styles/styleCache";
+import theme from "Base/theme";
+import { Loading } from "Base/components";
+import useRouteLoading from "Base/utils/hooks/useRouteLoading";
+import Head from "next/head";
+import { useCallback } from "react";
+
+const isClientSide = typeof window !== "undefined";
+
+export default function App({ Component, pageProps, router }: AppProps) {
   const { loading: isRouteLoading } = useRouteLoading();
 
+  const handleRedirectToLogin = useCallback(() => {
+    if (isClientSide) {
+      router.replace("/auth/login");
+    }
+  }, [router]);
+
   return (
-    <CacheProvider value={styleCache}>
-      <ChakraProvider theme={theme}>
-        <AppLayout>
-          {isRouteLoading ? (
-            <Center h="calc(100% - 70px)">
-              <Loading />
-            </Center>
-          ) : (
-            <Component {...pageProps} />
-          )}
-        </AppLayout>
-      </ChakraProvider>
-    </CacheProvider>
+    <>
+      <Head>Liga de Padel - Baradero</Head>
+      <AuthProvider>
+        <CacheProvider value={styleCache}>
+          <ChakraProvider theme={theme}>
+            {router.pathname.startsWith("/auth") ? (
+              <Component {...pageProps} />
+            ) : (
+              <PrivateRouteWrapper
+                loadingElement={() => <Loading h="100vh" />}
+                redirectLogin={handleRedirectToLogin}
+              >
+                <AppLayout>
+                  {isRouteLoading ? (
+                    <Center h="calc(100% - 70px)">
+                      <Loading />
+                    </Center>
+                  ) : (
+                    <Component {...pageProps} />
+                  )}
+                </AppLayout>
+              </PrivateRouteWrapper>
+            )}
+          </ChakraProvider>
+        </CacheProvider>
+      </AuthProvider>
+    </>
   );
 }

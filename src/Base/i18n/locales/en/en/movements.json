@@ -1,0 +1,110 @@
+{
+  "details": {
+    "title": "Movement #{{ id }}",
+    "cardTitle1": "Data of",
+    "cardTitle2": "Movement details"
+  },
+  "expenseList": {
+    "title": "Expenses list"
+  },
+  "list": {
+    "label": {
+      "movementType": "Movement Type",
+      "originBox": "Origin Box",
+      "destinyBox": "Destiny Box",
+      "boxValue": "Value",
+      "date": "Date",
+      "description": "Description"
+    },
+    "movementTypes": {
+      "WITHDRAW": "Withdraw",
+      "RENDITION": "Rendition",
+      "PAY": "Pay",
+      "MOVEMENT": "Movement",
+      "EXPENSE": "Parcel expense"
+    },
+    "actionButtons": {
+      "createMovement": "Create Movement",
+      "createRendition": "Create Rendition",
+      "createWithdraw": "Create Withdrawal"
+    }
+  },
+  "createMovement": {
+    "message": {
+      "success": {
+        "create": "Movement created successfully"
+      }
+    },
+    "title": "Create Movement",
+    "label": {
+      "originBox": "Select Origin Box",
+      "destinyBox": "Select Destiny Box",
+      "value": "Amount",
+      "description": "Description"
+    },
+    "boxCard": {
+      "title": "Available amount in the cash register",
+      "label": "Select a cash box"
+    },
+    "button": {
+      "submit": "Create Movement",
+      "buttonConfirm": "Confirm",
+      "buttonCancel": "Cancel"
+    },
+    "modal": {
+      "button": {
+        "buttonConfirm": "Confirm",
+        "buttonCancel": "Cancel"
+      },
+      "title": "Create New Movement",
+      "description": "Are you sure you want to create the movement?"
+    }
+  },
+  "createRendition": {
+    "message": {
+      "success": {
+        "create": "Rendition created successfully"
+      }
+    },
+    "title": "Create Rendition",
+    "button": {
+      "submit": "Create Rendition"
+    },
+    "modal": {
+      "button": {
+        "buttonConfirm": "Confirm",
+        "buttonCancel": "Cancel"
+      },
+      "title": "Create New Rendition",
+      "description": "Are you sure you want to create the rendition?"
+    }
+  },
+  "createWithdraw": {
+    "message": {
+      "success": {
+        "create": "Withdrawal created successfully"
+      }
+    },
+    "title": "Create Withdrawal",
+    "button": {
+      "submit": "Create Withdrawal"
+    },
+    "modal": {
+      "button": {
+        "buttonConfirm": "Confirm",
+        "buttonCancel": "Cancel"
+      },
+      "title": "Create New Withdrawal",
+      "description": "Are you sure you want to create the withdrawal?"
+    },
+    "carousel": {
+      "title": "Withdrawal Details",
+      "label": {
+        "description": "Description",
+        "value": "Value"
+      },
+      "addDetail": "New Expense"
+    },
+    "amountCard": "Accumulated Amount"
+  }
+}

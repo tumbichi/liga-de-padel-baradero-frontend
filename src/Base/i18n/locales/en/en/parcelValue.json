@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "edit": "Edit parcel value",
+    "create": "Create parcel value"
+  },
+  "error": {
+    "alert": {
+      "title": "Parcel value does not exist",
+      "description": "Create a new parcel value"
+    }
+  },
+  "dialog": {
+    "create": {
+      "title": "Create parcel value",
+      "description": "Are you sure you want to create the value?"
+    },
+    "edit": {
+      "title": "Edit parcel value",
+      "description": "Are you sure you want to edit the value?"
+    },
+    "buttonConfirm": "Confirm",
+    "buttonCancel": "Cancel"
+  },
+  "card": {
+    "label": {
+      "value": "Current value"
+    }
+  },
+  "create": {
+    "button": {
+      "submit": "Create parcel value"
+    },
+    "title": "Create Parcel Value",
+    "success": "Parcel value created successfully"
+  },
+  "edit": {
+    "button": {
+      "submit": "Edit parcel value"
+    },
+    "title": "Edit Parcel Value",
+    "success": "Parcel value updated successfully"
+  },
+  "parcelValue": {
+    "label": {
+      "value": "Value"
+    }
+  }
+}
