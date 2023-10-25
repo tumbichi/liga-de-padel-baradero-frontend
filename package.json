@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "preinstall": "echo 'always-auth=true\nregistry=https://registry.npmjs.org/\n@kushitech:registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' > .npmrc",
     "lint": "next lint",
     "lint:ci": "npm run lint $(git diff --name-only --diff-filter=ACMRTUXB origin/main | grep  -E \"(.js$|.jsx$|.ts$|.tsx$)\") --quiet",
     "prettier:check": "npx prettier --check \"(.js,jsx,ts,tsx,css,scss,less,html,json,md$)\")",
