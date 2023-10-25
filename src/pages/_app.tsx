@@ -29,7 +29,9 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <AuthProvider>
         <CacheProvider value={styleCache}>
           <ChakraProvider theme={theme}>
-            {router.pathname.startsWith("/auth") ? (
+            {router.pathname.startsWith("/auth") ||
+            router.pathname.startsWith("/fixture") ||
+            router.pathname.startsWith("/_error") ? (
               <Component {...pageProps} />
             ) : (
               <PrivateRouteWrapper

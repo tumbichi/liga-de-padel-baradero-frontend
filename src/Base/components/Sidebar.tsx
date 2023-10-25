@@ -71,7 +71,7 @@ const Sidebar = ({ colorScheme, menu, ...boxProps }: SidebarProps) => {
           ) : (
             <Center cursor="pointer" w={"100%"}>
               <Link href="/">
-                <LogoSymbol h="24px" w="24px" />
+                <LogoSymbol h="48px" w="48px" />
               </Link>
             </Center>
           )}
